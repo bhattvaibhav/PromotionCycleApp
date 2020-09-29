@@ -8,5 +8,12 @@ namespace PromotionCycleApp.Infrastructure.Domain
     {
         public string ID { get; set; }
         public int Price { get; set; }
+
+        public ProductSKUMaster(string id, int price)
+        {
+            this.ID = id;
+            this.Price = price;
+        }
+
     }
 }

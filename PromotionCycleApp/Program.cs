@@ -1,5 +1,4 @@
-﻿using PromotionCycleApp.Infrastructure.Domain;
-using PromotionCycleApp.Infrastructure.Service;
+﻿using PromotionCycleApp.Infrastructure.Service;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -10,7 +9,6 @@ namespace PromotionCycleApp
     {
         static void Main(string[] args)
         {
-
             Console.WriteLine("Enter Comma separated SKU ID ");
             var readItem = Console.ReadLine();
 
@@ -23,6 +21,9 @@ namespace PromotionCycleApp
             {
                 skuList.Add(readItem);
             }
+
+            ProductMasterSKUService ss = new ProductMasterSKUService();
+            var productList = ss.AddSKU(skuList);
         }
     }
 }
