@@ -24,6 +24,9 @@ namespace PromotionCycleApp
 
             ProductMasterSKUService ss = new ProductMasterSKUService();
             var productList = ss.AddSKU(skuList);
+            var resultList = ss.SKUPrice(productList);
+
+            Console.WriteLine(string.Format("Total Price of All SKU is: {0}", resultList.Sum(x => x.Price)));
         }
     }
 }

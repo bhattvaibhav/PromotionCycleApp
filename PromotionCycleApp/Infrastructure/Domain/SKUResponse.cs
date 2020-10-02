@@ -1,19 +1,15 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using System.Linq;
 
 namespace PromotionCycleApp.Infrastructure.Domain
 {
-    public class ProductSKUMaster
+    public class SKUResponse
     {
         public string ID { get; set; }
         public int Price { get; set; }
-        
+        public List<ProductSKUMaster> ProductSKUMaster { get; set; }        
+    }
 
-        public ProductSKUMaster(string id, int price)
-        {
-            this.ID = id;
-            this.Price = price;
-        }
-    }    
 }

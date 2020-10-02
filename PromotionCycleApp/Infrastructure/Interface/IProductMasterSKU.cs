@@ -8,5 +8,6 @@ namespace PromotionCycleApp.Infrastructure.Interface
     public interface IProductMasterSKU
     {
         List<ProductSKUMaster> AddSKU(List<string> skuList);
+        List<SKUResponse> SKUPrice(List<ProductSKUMaster> productSKUList);
     }
 }
